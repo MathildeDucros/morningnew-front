@@ -12,7 +12,7 @@ function Home() {
   const [articlesData, setArticlesData] = useState([]);
   const [topArticle, setTopArticle] = useState({});
 
-  const BACKEND_URL = "https://mymovizback.onrender.com";
+  const BACKEND_URL = "https://morningnews.onrender.com";
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/articles`)

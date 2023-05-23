@@ -25,7 +25,7 @@ function Header() {
     setDate(new Date());
   }, []);
 
-  const BACKEND_URL = "https://mymovizback.onrender.com";
+  const BACKEND_URL = "https://morningnews.onrender.com";
 
   const handleRegister = () => {
     fetch(`${BACKEND_URL}/users/signup`, {

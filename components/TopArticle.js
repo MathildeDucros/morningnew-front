@@ -12,7 +12,7 @@ function TopArticle(props) {
     if (!user.token) {
       return;
     }
-    const BACKEND_URL = "https://mymovizback.onrender.com/";
+    const BACKEND_URL = "https://morningnews.onrender.com";
 
     fetch(`${BACKEND_URL}/users/canBookmark/${user.token}`)
       .then((response) => response.json())
