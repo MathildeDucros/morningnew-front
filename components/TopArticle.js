@@ -12,10 +12,9 @@ function TopArticle(props) {
     if (!user.token) {
       return;
     }
+    const BACKEND_URL = "https://mymovizback.onrender.com/";
 
-    fetch(
-      `https://morningnews-back-theta.vercel.app/users/canBookmark/${user.token}`
-    )
+    fetch(`${BACKEND_URL}/users/canBookmark/${user.token}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.result && data.canBookmark) {

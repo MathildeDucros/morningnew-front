@@ -25,8 +25,10 @@ function Header() {
     setDate(new Date());
   }, []);
 
+  const BACKEND_URL = "https://mymovizback.onrender.com";
+
   const handleRegister = () => {
-    fetch("https://morningnews-back-theta.vercel.app/users/signup", {
+    fetch(`${BACKEND_URL}/users/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -46,7 +48,7 @@ function Header() {
   };
 
   const handleConnection = () => {
-    fetch("https://morningnews-back-theta.vercel.app/users/signin", {
+    fetch(`${BACKEND_URL}/users/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

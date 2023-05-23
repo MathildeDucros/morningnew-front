@@ -12,8 +12,10 @@ function Home() {
   const [articlesData, setArticlesData] = useState([]);
   const [topArticle, setTopArticle] = useState({});
 
+  const BACKEND_URL = "https://mymovizback.onrender.com";
+
   useEffect(() => {
-    fetch("https://morningnews-back-theta.vercel.app/articles")
+    fetch(`${BACKEND_URL}/articles`)
       .then((response) => response.json())
       .then((data) => {
         setTopArticle(data.articles[0]);

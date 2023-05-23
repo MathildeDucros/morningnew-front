@@ -14,10 +14,8 @@ function Article(props) {
     if (!user.token) {
       return;
     }
-
-    fetch(
-      `https://morningnews-back-theta.vercel.app/users/canBookmark/${user.token}`
-    )
+    const BACKEND_URL = "https://mymovizback.onrender.com";
+    fetch(`${BACKEND_URL}/users/canBookmark/${user.token}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.result && data.canBookmark) {
